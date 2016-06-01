@@ -18,4 +18,9 @@ public class Score {
 	{
 		return name;
 	}
+	
+	public String toString()
+	{
+		return score+", "+name;
+	}
 }
