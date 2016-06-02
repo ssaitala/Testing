@@ -1,3 +1,4 @@
+package highestScoresDemo;
 
 public class TestScore {
 
