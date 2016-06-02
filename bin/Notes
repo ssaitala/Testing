@@ -1,8 +1,45 @@
 Create a student array of size 5.
 Create a Student array of 8 (with different types of scores).
 ----Iteration Logic-----
+For each student added, compare the other elements in the array and sort in the descending order. (For now, imagine all the factory elements
+ are in descending order).
 
-
+if the size increased by 5, then
+	upon receiving another element, check to see if it is greater than the least element and find the correct slot of it.
+	Once you get the correct slot, then 
+	   move that element of the slot into a temporary variable and add this element there.
+	   
+	   Repeat the same process, until all the lower elements are replaced correctly. 
+	   (As part of this, the least element gets removed).
+	   
+	   ---> More in depth of this is given in the below notes:
+	   
 ----Iteration Logic End-----
+
+
 For each iteration print the marks and the name.
+
+
+Notes:
+
+Maintain 2 variables, temp1 and temp2.
+
+Suppose, if you have elements such as
+
+98
+87
+75
+67
+58
+47
+30
+21
+
+and if you want to insert 82 now, then it does as follows:
+
+ --> move 75 to temp1 and say usetemp1 = true and usetemp2 = false
+ --> copy 82 in place of 75
+ --> move 67 to temp2 and say usetemp1=false and usetemp2 = true
+ --> move 75 in place of 67
+ --> move 58 to temp1 and ....
  
