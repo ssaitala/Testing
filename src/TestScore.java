@@ -29,26 +29,24 @@ public class TestScore {
 						scoreArr[i] = score;
 						useTemp1 = true;
 						useTemp2 = false;
-					}
-					else {
-					if (useTemp1) {
-						temp2 = scoreArr[i];
-						scoreArr[i] = temp1;
+					} else {
+						if (useTemp1) {
+							temp2 = scoreArr[i];
+							scoreArr[i] = temp1;
 
-						useTemp1 = false;
-						useTemp2 = true;
+							useTemp1 = false;
+							useTemp2 = true;
+						}
+
+						else if (useTemp2) {
+							temp1 = scoreArr[i];
+							scoreArr[i] = temp2;
+
+							useTemp1 = true;
+							useTemp2 = false;
+						}
 					}
 
-					else if (useTemp2) {
-						temp1 = scoreArr[i];
-						scoreArr[i] = temp2;
-
-						useTemp1 = true;
-						useTemp2 = false;
-					}
-					}
-
-//					break;
 				}
 				i++;
 			}
